@@ -99,6 +99,38 @@
         @media (max-width: 350px) {
             .ad-iframe { width: 98vw !important; min-width: 90px; }
         }
+        /* Widget 1:4 iklan 300x250 */
+        .ad-widget-1-4 {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 18px;
+            margin: 32px auto 18px auto;
+            max-width: calc((300px * 4) + (18px * 3));
+            flex-wrap: wrap;
+        }
+        .ad-iframe-300x250 {
+            border-radius: 14px;
+            box-shadow: 0 2px 14px #23395d1a;
+            border: 1.5px solid #e3eaf3;
+            background: linear-gradient(92deg, #e3eaf3 0%, #f7fafd 100%);
+            width: 300px;
+            height: 250px;
+            min-width: 200px;
+            min-height: 150px;
+            display: block;
+        }
+        @media (max-width: 1280px) {
+            .ad-widget-1-4 { max-width: 100vw; }
+        }
+        @media (max-width: 1250px) {
+            .ad-widget-1-4 { flex-wrap: wrap; gap: 12px; }
+            .ad-iframe-300x250 { width: 48vw; max-width: 300px; min-width: 150px; }
+        }
+        @media (max-width: 650px) {
+            .ad-widget-1-4 { flex-wrap: wrap; gap: 7px; }
+            .ad-iframe-300x250 { width: 98vw; max-width: 300px; min-width: 100px; }
+        }
         .features-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
@@ -372,7 +404,6 @@
             <div class="feature-actions">
                 <button onclick="previewDesc(this)">Preview</button>
             </div>
-            <!-- Iklan di dalam card -->
             <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
         </div>
         <div class="feature-card" tabindex="0">
@@ -406,6 +437,14 @@
 
     <!-- Iklan Bawah -->
     <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
+
+    <!-- Widget Iklan 1:4 (4x 300x250) di atas footer -->
+    <div class="ad-widget-1-4">
+        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
+        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
+        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
+        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
+    </div>
 
     <div id="previewModal" class="modal" onclick="modalBgClick(event)">
         <div class="modal-content">
