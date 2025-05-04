@@ -9,13 +9,13 @@
     <meta name="description" content="Preview video CDN responsif dan link selalu di tengah dengan modal elegan.">
     <style>
         :root {
-            --primary: #172642;
-            --secondary: #23395d;
-            --accent: #29b6f6;
-            --bg: #f7fafd;
-            --bg-card: rgba(255,255,255,0.95);
-            --border: #e3eaf3;
-            --shadow: 0 1.5px 12px 0 rgba(23,38,66,0.08);
+            --primary: #252A34;
+            --secondary: #08D9D6;
+            --accent: #FF2E63;
+            --bg: #EAEAEA;
+            --bg-card: #fff;
+            --border: #08D9D6;
+            --shadow: 0 1.5px 12px 0 rgba(37,42,52,0.08);
             --radius: 16px;
             --transition: 0.15s cubic-bezier(.4,2,.6,1);
         }
@@ -31,7 +31,7 @@
         .header {
             text-align: center;
             padding: 46px 7px 22px 7px;
-            background: linear-gradient(120deg, #172642 0%, #23395d 70%, #29b6f6 120%);
+            background: linear-gradient(120deg, var(--primary) 0%, #35374a 70%, var(--secondary) 120%);
             color: #fff;
             border-radius: 0 0 30px 30px;
             box-shadow: 0 6px 22px 0 rgba(23,38,66,0.10);
@@ -45,12 +45,12 @@
             font-weight: 800;
             margin-bottom: 9px;
             letter-spacing: 1.2px;
-            background: linear-gradient(92deg, #fff 20%, #90caf9 55%, #29b6f6 90%);
+            background: linear-gradient(92deg, #fff 20%, #08D9D6 55%, var(--accent) 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-fill-color: transparent;
-            text-shadow: 0 2px 16px #29b6f655;
+            text-shadow: 0 2px 16px #FF2E6355;
             display: inline-block;
             font-family: 'Poppins', 'Inter', Arial, sans-serif;
         }
@@ -64,7 +64,7 @@
             margin-left: auto;
             margin-right: auto;
             color: #fff;
-            text-shadow: 0 2px 8px #23395d55;
+            text-shadow: 0 2px 8px #252A3455;
             position: relative;
             z-index: 1;
             font-family: 'Inter', Arial, sans-serif;
@@ -74,32 +74,40 @@
             margin-top: 8px;
             margin-bottom: 12px;
             padding: 4px 14px;
-            background: linear-gradient(90deg, #29b6f6 70%, #b2ebf2 100%);
-            color: #172642;
+            background: linear-gradient(90deg, var(--secondary) 70%, #CFFAFE 100%);
+            color: var(--primary);
             font-size: .95em;
             font-weight: 700;
             border-radius: 16px;
-            box-shadow: 0 1px 6px #29b6f629, 0 1px 2px #fff6;
+            box-shadow: 0 1px 6px #08D9D629, 0 1px 2px #fff6;
             letter-spacing: 1px;
-            border: 1.2px solid #e3eaf3;
+            border: 1.2px solid var(--accent);
             text-shadow: 0 0.5px 1px #fff9;
             position: relative;
             z-index: 2;
             user-select: none;
             font-family: 'Poppins', Arial, sans-serif;
         }
+        .ad-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+        }
         .ad-iframe {
             display: block;
-            margin: 18px auto;
             border-radius: 13px;
-            box-shadow: 0 2px 12px #23395d1c;
-            border: 1.5px solid #e3eaf3;
-            background: linear-gradient(92deg, #e3eaf3 0%, #f7fafd 100%);
+            box-shadow: 0 2px 12px #252A341c;
+            border: 1.5px solid var(--border);
+            background: linear-gradient(92deg, var(--border) 0%, var(--bg) 100%);
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 320/50;
+            height: auto;
+            min-height: 28px;
+            margin: 18px 0;
         }
-        @media (max-width: 350px) {
-            .ad-iframe { width: 98vw !important; min-width: 90px; }
-        }
-        /* Widget 1:4 iklan 300x250 */
         .ad-widget-1-4 {
             display: flex;
             justify-content: center;
@@ -111,14 +119,368 @@
         }
         .ad-iframe-300x250 {
             border-radius: 14px;
-            box-shadow: 0 2px 14px #23395d1a;
-            border: 1.5px solid #e3eaf3;
-            background: linear-gradient(92deg, #e3eaf3 0%, #f7fafd 100%);
-            width: 300px;
-            height: 250px;
-            min-width: 200px;
-            min-height: 150px;
+            box-shadow: 0 2px 14px #252A341a;
+            border: 1.5px solid var(--border);
+            background: linear-gradient(92deg, var(--border) 0%, var(--bg) 100%);
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 300/250;
+            height: auto;
+            min-height: 90px;
+            margin: 12px 0;
+        }
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 24px 18px;
+            max-width: 760px;
+            margin: 0 auto 32px auto;
+            padding: 24px 3vw 32px 3vw;
+            border-radius: 30px;
+            background: linear-gradient(110deg, #fff 75%, #EAEAEA 100%);
+            box-shadow: 0 10px 38px 0 rgba(37,42,52,0.08), 0 1.5px 8px #08D9D610;
+            border: 2px solid var(--border);
+            position: relative;
+            z-index: 2;
+        }
+        .feature-card {
+            position: relative;
+            overflow: visible;
+            background: linear-gradient(135deg, #fff 70%, #EAEAEA 100%);
+            border-radius: 22px;
+            box-shadow: 0 6px 28px #252A3410, 0 1.5px 8px #FF2E6308;
+            padding: 24px 16px 18px 16px;
+            text-align: center;
+            border: 1.5px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: box-shadow .24s cubic-bezier(.4,2,.6,1), 
+                        background .23s, 
+                        border-color .19s, 
+                        transform .13s;
+            cursor: pointer;
+            min-height: 210px;
+        }
+        .feature-card:hover, .feature-card:focus-within {
+            box-shadow: 0 16px 38px 0 #08D9D627, 0 6px 22px #252A3414;
+            background: linear-gradient(135deg, #EAEAEA 0%, #fff 100%);
+            border-color: var(--accent);
+            transform: translateY(-3px) scale(1.034);
+        }
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -22px; right: -22px;
+            width: 56px; height: 56px;
+            background: radial-gradient(circle at 35% 35%, #08D9D66c 45%, #FF2E6317 100%);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.7;
+            pointer-events: none;
+            filter: blur(1px);
+            transition: opacity .24s;
+        }
+        .feature-card:hover::before { opacity: 1; }
+        .feature-icon {
+            font-size: 1.35em;
+            margin-bottom: 4px;
+            color: var(--accent);
+            opacity: 1;
             display: block;
+            filter: drop-shadow(0 1px 10px #FF2E6288);
+            font-family: 'Poppins', 'Inter', Arial, sans-serif;
+            transition: transform 0.15s cubic-bezier(.4,2,.6,1);
+            z-index: 2;
+            position: relative;
+        }
+        .feature-card:hover .feature-icon,
+        .feature-card:focus-within .feature-icon {
+            transform: translateY(-6px) scale(1.22) rotate(-9deg);
+        }
+        .feature-icon i {
+            font-size: 2.2em;
+            color: var(--secondary);
+            background: linear-gradient(92deg, var(--accent) 40%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            transition: filter 0.15s;
+            filter: brightness(1.07);
+        }
+        .feature-title {
+            font-size: 1.17em;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: .5px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            font-family: 'Poppins', 'Inter', Arial, sans-serif;
+            background: linear-gradient(92deg, var(--primary) 60%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            padding-bottom: 3px;
+        }
+        .feature-title::after {
+            content: "";
+            display: block;
+            margin: 6px auto 0 auto;
+            width: 32px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, var(--accent) 50%, var(--secondary) 100%);
+            opacity: 0.42;
+        }
+        .feature-desc {
+            font-size: 0.97em;
+            color: #252A34;
+            background: #F7FFF7;
+            border-radius: 9px;
+            padding: 10px 7px 9px 7px;
+            margin-bottom: 13px;
+            word-break: break-all;
+            box-shadow: 0 1px 6px #252A3415;
+            min-height: 26px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        .feature-desc a {
+            color: var(--accent);
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 1.01em;
+            transition: color 0.13s;
+            word-break: break-all;
+        }
+        .feature-desc a:hover {
+            color: var(--secondary);
+        }
+        .feature-actions {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            width: 100%;
+            margin-top: 8px;
+        }
+        .feature-actions button {
+            font-family: 'Inter', 'Poppins', Arial, sans-serif;
+            padding: 10px 0;
+            border: none;
+            border-radius: 16px;
+            background: linear-gradient(91deg, var(--accent) 0%, var(--secondary) 100%);
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            font-size: 1em;
+            width: 100%;
+            max-width: 130px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px #08D9D62a;
+            transition: background 0.16s, box-shadow 0.12s, color 0.13s, transform 0.13s;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-actions button:hover, .feature-actions button:focus {
+            background: linear-gradient(92deg, var(--secondary) 0%, var(--accent) 100%);
+            color: #fff;
+            transform: translateY(-2.5px) scale(1.08);
+            box-shadow: 0 8px 18px #08D9D63a;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0; top: 0; right: 0; bottom: 0;
+            width: 100vw; height: 100vh;
+            background: rgba(37,42,52,0.26);
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+        .modal.active { display: flex; animation: fadeInBg 0.22s;}
+        @keyframes fadeInBg { from { opacity: 0;} to { opacity: 1;} }
+        .modal-content {
+            background: var(--bg-card);
+            border-radius: 18px;
+            box-shadow: 0 16px 48px 0 #252A342a, 0 2px 12px #FF2E6323;
+            max-width: 97vw;
+            width: 100%;
+            max-width: 620px;
+            position: relative;
+            overflow: visible;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0 18px 0;
+            border: 2.5px solid var(--accent);
+            margin: 38px auto;
+            animation: modalPop 0.18s cubic-bezier(.41,1.6,.45,1.01);
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        @keyframes modalPop { from { transform: scale(.95) translateY(24px); opacity:0; } to { transform: scale(1) translateY(0); opacity: 1;} }
+        .modal-link {
+            padding: 13px 12px 0 12px;
+            font-size: 1.04em;
+            color: var(--primary);
+            word-break: break-all;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .modal-link a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .modal-video-wrapper {
+            width: 100%;
+            max-width: 560px;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 9px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 28px #08D9D624, 0 1px 3px #FF2E6329;
+            border: 1.5px solid #e3eaf3;
+        }
+        .modal-iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #000;
+        }
+        .close-modal {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            width: 47px;
+            height: 47px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            border-radius: 50%;
+            color: #fff;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+            box-shadow: 0 2px 18px #08D9D650;
+            cursor: pointer;
+            z-index: 20;
+            opacity: 0.97;
+            border: none;
+            outline: none;
+            transition: background 0.13s, box-shadow 0.14s, color 0.13s, transform 0.13s;
+        }
+        .close-modal:hover, .close-modal:focus {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+            color: #fff;
+            box-shadow: 0 8px 28px #08D9D6a0;
+            transform: scale(1.09) rotate(7deg);
+            outline: 2px solid #08D9D6;
+        }
+        footer {
+            text-align: center;
+            padding: 18px 0 10px 0;
+            color: #252A3466;
+            font-size: 0.97em;
+            background: none;
+            margin-top: 48px;
+            position: relative;
+            letter-spacing: 0.04em;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+        footer::before {
+            content: "";
+            display: block;
+            width: 110px;
+            height: 4px;
+            border-radius: 6px;
+            margin: 0 auto 13px auto;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--secondary) 100%);
+            opacity: .18;
+        }
+        /* RESPONSIF MOBILE */
+        @media (max-width: 900px) {
+            .features-container {
+                grid-template-columns: 1fr 1fr;
+                max-width: 98vw;
+                padding: 16px 1vw 20px 1vw;
+                gap: 13px 8px;
+            }
+            .feature-card {
+                min-width: 0;
+                padding: 12px 7px 10px 7px;
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 650px) {
+            .features-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 7px 1vw 12px 1vw;
+                border-radius: 16px;
+            }
+            .feature-card {
+                padding: 10px 5px 8px 5px;
+                border-radius: 14px;
+                font-size: 0.98em;
+            }
+            .feature-title { font-size: 1em; }
+            .feature-icon i { font-size: 1.5em; }
+            .feature-actions button { font-size: 0.97em; padding: 8px 0; }
+        }
+        @media (max-width: 500px) {
+            .header {
+                padding: 10vw 2vw 6vw 2vw;
+                border-radius: 0 0 14px 14px;
+                margin-bottom: 14px;
+            }
+            .header h1 { font-size: 1.05em; }
+            .limited-badge { font-size: 0.91em; padding: 3px 9px; }
+            .ad-iframe, .ad-iframe-300x250 {
+                max-width: 98vw;
+                min-width: 80px;
+                border-radius: 9px;
+            }
+            .ad-widget-1-4 {
+                flex-direction: column;
+                gap: 9px;
+                max-width: 100vw;
+                margin: 14px auto 10px auto;
+            }
+            .ad-iframe-300x250 {
+                width: 98vw !important;
+                height: auto;
+                min-width: 70px;
+                min-height: 70px;
+                max-width: 300px;
+            }
+            .modal-content {
+                margin: 4vw auto;
+                border-radius: 7px;
+                padding-bottom: 10px;
+            }
+            .close-modal {
+                top: 6px; right: 7px;
+                width: 33px; height: 33px;
+                font-size: 1.2em;
+            }
+            .modal-link { font-size: 0.98em; padding: 7px 4px 0 4px; }
+            .modal-video-wrapper { max-width: 99vw; border-radius: 6px; }
+            footer { font-size: 0.95em; padding: 13px 0 8px 0; margin-top: 20px; }
+            footer::before { width: 70px; height: 3px; margin-bottom: 8px; }
+        }
+        @media (max-width: 350px) {
+            body { font-size: 0.95em; }
+            .feature-card { font-size: 0.93em; }
+            .ad-iframe, .ad-iframe-300x250 { min-width: 60px; }
         }
         @media (max-width: 1280px) {
             .ad-widget-1-4 { max-width: 100vw; }
@@ -127,110 +489,55 @@
             .ad-widget-1-4 { flex-wrap: wrap; gap: 12px; }
             .ad-iframe-300x250 { width: 48vw; max-width: 300px; min-width: 150px; }
         }
-        @media (max-width: 650px) {
-            .ad-widget-1-4 { flex-wrap: wrap; gap: 7px; }
-            .ad-iframe-300x250 { width: 98vw; max-width: 300px; min-width: 100px; }
-        }
-        .features-container { /* ... (CSS card seperti revisi sebelumnya, tidak diulang agar ringkas) ... */ }
-        .feature-card { /* ... */ }
-        .feature-icon { /* ... */ }
-        .feature-title { /* ... */ }
-        .feature-desc { /* ... */ }
-        .feature-actions { /* ... */ }
-        .feature-actions button { /* ... */ }
-        .modal { /* ... */ }
-        .modal.active { /* ... */ }
-        .modal-content { /* ... */ }
-        .modal-link { /* ... */ }
-        .modal-video-wrapper { /* ... */ }
-        .modal-iframe { /* ... */ }
-        .close-modal { /* ... */ }
-        .close-modal:hover, .close-modal:focus { /* ... */ }
-        footer { /* ... */ }
-        footer::before { /* ... */ }
-        @media (max-width: 720px) { /* ... */ }
-        @media (max-width: 500px) { /* ... */ }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>Fitur Unggulan<br>Sistem Kependudukan</h1>
+        <h1>Videy<br>Doodstream</h1>
         <div class="limited-badge">LIMITED EDITION</div>
-        <p>Solusi premium dan eksklusif untuk pengelolaan data penduduk berbasis digital dengan fitur modern, desain mewah, dan pengalaman terbatas hanya untuk Anda.</p>
+        <p>Nikmati tayangan video terbaru dari Videy dan Doodstream dengan kualitas terbaik. Jelajahi ribuan film dan serial populer yang sedang trending, lengkap dengan informasi durasi, sinopsis, dan jadwal rilis. Temukan konten favoritmu dengan mudah dan cepat.</p>
     </div>
 
     <!-- Iklan Atas -->
-    <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
-
-    <div class="features-container">
-        <div class="feature-card" tabindex="0">
-            <span class="feature-icon" aria-label="Demo Video">
-                <i class="bi bi-play-circle-fill"></i>
-            </span>
-            <div class="feature-title">Video Demo CDN</div>
-            <div class="feature-desc">
-                <a href="https://cdn.videy.co/jz5eY3PI1.mp4" target="_blank">https://cdn.videy.co/jz5eY3PI1.mp4</a>
-            </div>
-            <div class="feature-actions">
-                <button onclick="previewDesc(this)">Preview</button>
-            </div>
-            <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
-        </div>
-        <div class="feature-card" tabindex="0">
-            <span class="feature-icon" aria-label="Statistik">
-                <i class="bi bi-bar-chart"></i>
-            </span>
-            <div class="feature-title">Statistik Penduduk</div>
-            <div class="feature-desc">
-                <a href="https://example.com/statistik" target="_blank">https://example.com/statistik</a>
-            </div>
-            <div class="feature-actions">
-                <button onclick="previewDesc(this)">Preview</button>
-            </div>
-            <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
-        </div>
-        <div class="feature-card" tabindex="0">
-            <span class="feature-icon" aria-label="Kartu Penduduk">
-                <i class="bi bi-person-vcard-fill"></i>
-            </span>
-            <div class="feature-title">Kartu Penduduk</div>
-            <div class="feature-desc">
-                <a href="https://contoh.com/vcard" target="_blank">https://contoh.com/vcard</a>
-            </div>
-            <div class="feature-actions">
-                <button onclick="previewDesc(this)">Preview</button>
-            </div>
-            <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
-        </div>
-        <!-- Tambahkan feature-card baru sesuai kebutuhan -->
+    <div class="ad-center">
+        <iframe src="adslot.html" class="ad-iframe" frameborder="0" scrolling="no"></iframe>
     </div>
 
+        <!-- WADAH OTOMATIS UNTUK FEATURE CARD -->
+    <div class="features-container" id="features-container"></div>
+
     <!-- Iklan Bawah -->
-    <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
+    <div class="ad-center">
+        <iframe src="adslot.html" class="ad-iframe" frameborder="0" scrolling="no"></iframe>
+    </div>
 
     <!-- Widget Iklan 1:4 (4x 300x250) di atas footer -->
     <div class="ad-widget-1-4">
-        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
-        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
-        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
-        <iframe src="adslot-300x250.html" width="300" height="250" frameborder="0" scrolling="no" class="ad-iframe-300x250"></iframe>
+        <div class="ad-center"><iframe src="adslot-300x250.html" class="ad-iframe-300x250" frameborder="0" scrolling="no"></iframe></div>
+        <div class="ad-center"><iframe src="adslot-300x250.html" class="ad-iframe-300x250" frameborder="0" scrolling="no"></iframe></div>
+        <div class="ad-center"><iframe src="adslot-300x250.html" class="ad-iframe-300x250" frameborder="0" scrolling="no"></iframe></div>
+        <div class="ad-center"><iframe src="adslot-300x250.html" class="ad-iframe-300x250" frameborder="0" scrolling="no"></iframe></div>
     </div>
 
     <div id="previewModal" class="modal" onclick="modalBgClick(event)">
         <div class="modal-content">
             <button class="close-modal" onclick="closeModal()" aria-label="Tutup preview">&times;</button>
             <!-- Iklan atas modal -->
-            <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
+            <div class="ad-center">
+                <iframe src="adslot.html" class="ad-iframe" frameborder="0" scrolling="no"></iframe>
+            </div>
             <div class="modal-link" id="modalLink"></div>
             <div class="modal-video-wrapper">
                 <iframe class="modal-iframe" id="modalIframe" allowfullscreen allow="autoplay; encrypted-media"></iframe>
             </div>
             <!-- Iklan bawah modal -->
-            <iframe src="adslot.html" width="320" height="50" frameborder="0" scrolling="no" class="ad-iframe"></iframe>
+            <div class="ad-center">
+                <iframe src="adslot.html" class="ad-iframe" frameborder="0" scrolling="no"></iframe>
+            </div>
         </div>
     </div>
     <footer>
-        &copy; 2025 Sistem Kependudukan Premium &mdash; Demo preview video CDN di halaman statis.
+        &copy; 2025 Sistem west303 &mdash; Gemini Kreasi Nusantara.
     </footer>
     <script>
         function previewDesc(btn) {
@@ -289,5 +596,7 @@
             if (e.key === "Escape") closeModal();
         });
     </script>
+        <!-- PANGGIL features.js -->
+    <script src="features.js"></script>
 </body>
 </html>
