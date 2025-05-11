@@ -119,6 +119,174 @@ const features = [
         title: 'ðŸ“ŒK3N4L4N D4R1 FB, K3T3MU L4NGSUNG NGW DI 0Y0',
         link: 'https://cdn.videy.co/bysMhBq81.mp4',
         desc: 'Streaming cepat & Gratis.',
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 1",
+        "link": "https://videy.co/v/?id=mk7zFJBW1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 2",
+        "link": "https://videy.co/v/?id=Mc2zfQYU1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 3",
+        "link": "https://videy.co/v/?id=nmOXgMYa1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 4",
+        "link": "https://videy.co/v/?id=RzkRLphC1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 5",
+        "link": "https://videy.co/v/?id=xPFuXvaX1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 6",
+        "link": "https://videy.co/v/?id=KytLConM1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 7",
+        "link": "https://videy.co/v/?id=npcAyFya1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 8",
+        "link": "https://videy.co/v/?id=asUIydHT1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 9",
+        "link": "https://videy.co/v/?id=LthYI9xB1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 10",
+        "link": "https://videy.co/v/?id=vwLd1hn41.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 11",
+        "link": "https://videy.co/v/?id=tyWhscEM1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 12",
+        "link": "https://videy.co/v/?id=RsQZ1lNd1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 13",
+        "link": "https://videy.co/v/?id=JUuXJlbd1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 14",
+        "link": "https://videy.co/v/?id=LsnFPhcS1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 15",
+        "link": "https://videy.co/v/?id=LttH2JRN1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 16",
+        "link": "https://videy.co/v/?id=XOyFKFfb1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 17",
+        "link": "https://videy.co/v/?id=QLA3oJAE1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 18",
+        "link": "https://videy.co/v/?id=Tv8YjdH11.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 19",
+        "link": "https://videy.co/v/?id=tviyhhae1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 20",
+        "link": "https://videy.co/v/?id=o7jso1lL1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 21",
+        "link": "https://videy.co/v/?id=qnYcH8Ym1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 22",
+        "link": "https://videy.co/v/?id=aeB9100k1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 23",
+        "link": "https://videy.co/v/?id=LY5pdDQh1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 24",
+        "link": "https://videy.co/v/?id=2lxv62jZ1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 25",
+        "link": "https://videy.co/v/?id=ae5QzbM81.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 26",
+        "link": "https://videy.co/v/?id=dzL30F3s1.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 27",
+        "link": "https://videy.co/v/?id=6XzTo4031.mp4",
+        "desc": "Streaming cepat & Gratis."
+    },
+    {
+        "icon": "bi bi-star",
+        "title": "Videy Episode 28",
+        "link": "https://videy.co/v/?id=M9OcDKOE1.mp4",
+        "desc": "Streaming cepat & Gratis."
     },    
     // Tambahkan card baru di sini:
     // {
